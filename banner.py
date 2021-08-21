@@ -2,6 +2,7 @@ import discord
 import asyncio
 import sqlite3
 import requests
+import os
 
 from discord_webhook import DiscordWebhook
 
@@ -11,7 +12,7 @@ client = discord.Client()
 ### 배너 카테고리에 역할설정하세요 ! ! ! ###
 ##########################################
 
-token = 'ODc4NDU0NTk1NjYyMjgyNzUz.YSBamA.DvtV_SLdY6_hP-9S9eXlgxd8geU' #봇토큰
+token = 'access_token' #봇토큰
 category_id = '872368787054284832' #배너채널 생성되는 카테고리 ID
 banner_role = '[YM] B A N N E R' #배너역할 이름
 logchannel_id = '878454983593427004' #개설 로그채널 ID
@@ -193,5 +194,5 @@ async def on_message(message):
             dev = 𝓨𝓤𝓜𝓜𝓨#7777, id = 755250089844408330
         """
 
-
+access_token = os.environ["BOT_TOKEN"]
 client.run(token)
